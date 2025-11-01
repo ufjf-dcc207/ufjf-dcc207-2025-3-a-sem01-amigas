@@ -1,21 +1,6 @@
-import { useState } from 'react'
 import './App.css'
-type PeleProps = {
-  tipo: string, 
-  adversidade: string,
-  status: string;
-}
+import Pele, { type PeleProps } from './componentes/Pele/Pele'
 
-function Pele({tipo, adversidade,status}: PeleProps) {
-  return (
-    <div>
-      <div> {tipo}</div>
-      <div> {adversidade}</div>
-      <div> {status}</div>
-    </div>
-  )
-
-}
 const listaPeles:PeleProps[]=[
   {tipo:"aaa",adversidade:"bbb",status:"ccc"},
    {tipo:"aaa1",adversidade:"bbb1",status:"ccc1"},
