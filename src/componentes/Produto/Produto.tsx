@@ -1,14 +1,14 @@
-import "./Pele.css"
-export type PeleProps = {
+import "./Produto.css"
+export type ProdutoProps = {
   tipo: string, 
   adversidade: string,
   status: string;
 }
 
 
-export default function Pele({tipo, adversidade,status}: PeleProps) {
+export default function Produto({tipo, adversidade,status}: ProdutoProps) {
   return (
-    <div className="PeleCtn">
+    <div className="ProdutoCtn">
       <div> {tipo}</div>
       <div> {adversidade}</div>
       <div> {status}</div>
