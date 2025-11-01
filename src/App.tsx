@@ -1,5 +1,6 @@
 import './App.css'
 import Pele, { type PeleProps } from './componentes/Pele/Pele'
+import Produto, {type ProdutoProps} from './componentes/Produto/Produto'
 
 const listaPeles:PeleProps[]=[
   {tipo:"aaa",adversidade:"bbb",status:"ccc"},
