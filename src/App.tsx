@@ -1,16 +1,31 @@
 import { useState } from 'react'
 import './App.css'
-type Pele = {
+type PeleProps = {
   tipo: string, 
   adversidade: string,
   status: string;
 }
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Pele({tipo, adversidade,status}: PeleProps) {
   return (
-    <h1>AAAAAAAA</h1>
+    <div>
+      <div> {tipo}</div>
+      <div> {adversidade}</div>
+      <div> {status}</div>
+    </div>
+  )
+
+}
+
+function App() {
+  
+  return (
+    <div>
+      <h1>AAAAAAAA</h1>
+      <Pele tipo='aaa' adversidade='bbb' status='ccc'></Pele>
+    </div>
+
+    
   )
 }
 
