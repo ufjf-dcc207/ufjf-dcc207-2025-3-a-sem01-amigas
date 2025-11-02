@@ -1,50 +1,73 @@
 import "./App.css";
-import Pele, { type PeleProps } from "./componentes/Pele/Pele";
-import Produto, { type ProdutoProps } from "./componentes/Produto/Produto";
+import SkinCare, { type SkinCareProps } from "./componentes/SkinCare/SkinCare";
 
-
-
-const listaPeles: PeleProps[] = [
-  { tipo: "Mista", adversidade: "Oleosidade na zona T (testa, nariz e queixo) e ressecamento nas bochechas; poros dilatados na zona T.", 
-    status: "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região." },
-  { tipo: "Oleosa", adversidade: "Excesso de brilho, acne, cravos, poros dilatados, tendência à inflamação.", 
-    status: "Produz mais sebo que o necessário; aparência brilhante; textura espessa." },
-  { tipo: "Seca", adversidade: "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.", 
-    status: "Baixa produção de oleosidade; toque áspero; aparência opaca." },
-  { tipo: "Normal", adversidade: "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.", 
-    status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa." },
-  { tipo: "Sensível", adversidade: "Vermelhidão, ardor, coceira, irritações com produtos ou clima; rosácea em alguns casos.", 
-    status: "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes." },
+// --- Dados ---
+const listaSkincare: SkinCareProps[] = [
+  {
+    pele: {
+      tipo: "Mista",
+      adversidade:
+        "Oleosidade na zona T (testa, nariz e queixo) e ressecamento nas bochechas; poros dilatados na zona T.",
+      status:
+        "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
+    },
+    produto: {nome: "bbb", uso: "ccc" },
+  },
+  {
+    pele: {
+      tipo: "Oleosa",
+      adversidade:
+        "Excesso de brilho, acne, cravos, poros dilatados, tendência à inflamação.",
+      status:
+        "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
+    },
+    produto: {  nome: "bbb1", uso: "ccc1" },
+  },
+  {
+    pele: {
+      tipo: "Seca",
+      adversidade:
+        "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
+      status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
+    },
+    produto: { nome: "bbb2", uso: "ccc2" },
+  },
+  {
+    pele: {
+      tipo: "Normal",
+      adversidade:
+        "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
+      status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
+    },
+    produto:  {nome: "Creme Hidratante", uso: "Uso diário" },
+  },
+  {
+    pele: {
+      tipo: "Sensível",
+      adversidade:
+        "Vermelhidão, ardor, coceira, irritações com produtos ou clima; rosácea em alguns casos.",
+      status:
+        "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
+    },
+    produto: { nome: "Gel Calmante", uso: "Após limpeza" },
+  },
 ];
 
-const listaProduto: ProdutoProps[] = [
-  
-  { icone: "aaa", nome: "bbb", uso: "ccc" },
-  { icone: "aaa1", nome: "bbb1", uso: "ccc1" },
-  { icone: "aa2", nome: "bbb2", uso: "ccc2" },
-];
-
-
+// --- Componente principal ---
 function App() {
   return (
-    <div>
+    <div className="App">
+      <h1 className="titulo">Produtos de skin care para cada tipo de pele</h1>
+      <h2 className="subtitulo">Tipos de pele:</h2>
+
+      <main className="SkincaresCtn">
+
+        {listaSkincare.map((item, index) => (
+                <SkinCare key={index} produto={item.produto} pele={item.pele} />
+              ))}
+      </main> 
+
      
-        <h1 className="titulo">Produtos de skin care para 
-          cada tipo de pele</h1>
-          <h2 className="subtitulo">Tipos de pele:</h2>
-
-      {listaPeles.map((pele) => (
-        <Pele
-          tipo={pele.tipo}
-          adversidade={pele.adversidade}
-          status={pele.status}
-        ></Pele>
-      ))}
-
-      
-      {listaProduto.map((produto) => (
-        <Produto icone={produto.icone} nome={produto.nome} uso={produto.uso} />
-      ))}
     </div>
   );
 }
