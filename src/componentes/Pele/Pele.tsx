@@ -11,6 +11,8 @@ export default function Pele({tipo, adversidade,status}: PeleProps) {
     <div className="PeleCtn">
       <div> {tipo}</div>
       <div> {adversidade}</div>
+
+      
       <div> {status}</div>
     </div>
   )

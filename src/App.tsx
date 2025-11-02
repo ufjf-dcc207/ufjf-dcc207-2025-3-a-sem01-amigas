@@ -1,8 +1,5 @@
 import "./App.css";
-
 import SkinCare, { type SkinCareProps } from "./componentes/SkinCare/SkinCare";
-
-
 
 // --- Dados ---
 const listaSkincare: SkinCareProps[] = [
@@ -14,7 +11,7 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
     },
-    produto: { icone: "aaa", nome: "bbb", uso: "ccc" },
+    produto: {nome: "bbb", uso: "ccc" },
   },
   {
     pele: {
@@ -24,7 +21,7 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
     },
-    produto: { icone: "aaa1", nome: "bbb1", uso: "ccc1" },
+    produto: {  nome: "bbb1", uso: "ccc1" },
   },
   {
     pele: {
@@ -33,7 +30,7 @@ const listaSkincare: SkinCareProps[] = [
         "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
       status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
     },
-    produto: { icone: "aa2", nome: "bbb2", uso: "ccc2" },
+    produto: { nome: "bbb2", uso: "ccc2" },
   },
   {
     pele: {
@@ -42,7 +39,7 @@ const listaSkincare: SkinCareProps[] = [
         "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
       status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
     },
-    produto: { icone: "avon", nome: "Creme Hidratante", uso: "Uso diário" },
+    produto:  {nome: "Creme Hidratante", uso: "Uso diário" },
   },
   {
     pele: {
@@ -52,25 +49,25 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
     },
-    produto: { icone: "nivea", nome: "Gel Calmante", uso: "Após limpeza" },
+    produto: { nome: "Gel Calmante", uso: "Após limpeza" },
   },
 ];
 
-
-
+// --- Componente principal ---
 function App() {
   return (
-    <div>
+    <div className="App">
       <h1 className="titulo">Produtos de skin care para cada tipo de pele</h1>
       <h2 className="subtitulo">Tipos de pele:</h2>
 
-      {listaSkincare.map((item, index) => (
-        <SkinCare
-          key={index}
-          produto={item.produto}
-          pele={item.pele}
-        />
-      ))}
+      <main className="SkincaresCtn">
+
+        {listaSkincare.map((item, index) => (
+                <SkinCare key={index} produto={item.produto} pele={item.pele} />
+              ))}
+      </main> 
+
+     
     </div>
   );
 }
