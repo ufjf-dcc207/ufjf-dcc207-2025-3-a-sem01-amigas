@@ -9,63 +9,56 @@ export type SkinCareProps = {
 };
 
 // --- Dados ---
-const listaPeles: PeleProps[] = [
-  {
-    tipo: "Mista",
-    adversidade:
-      "Oleosidade na zona T (testa, nariz e queixo) e ressecamento nas bochechas; poros dilatados na zona T.",
-    status:
-      "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
-  },
-  {
-    tipo: "Oleosa",
-    adversidade:
-      "Excesso de brilho, acne, cravos, poros dilatados, tendência à inflamação.",
-    status:
-      "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
-  },
-  {
-    tipo: "Seca",
-    adversidade:
-      "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
-    status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
-  },
-  {
-    tipo: "Normal",
-    adversidade:
-      "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
-    status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
-  },
-  {
-    tipo: "Sensível",
-    adversidade:
-      "Vermelhidão, ardor, coceira, irritações com produtos ou clima; rosácea em alguns casos.",
-    status:
-      "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
-  },
-];
-
-const listaProduto: ProdutoProps[] = [
-  { icone: "aaa", nome: "bbb", uso: "ccc" },
-  { icone: "aaa1", nome: "bbb1", uso: "ccc1" },
-  { icone: "aa2", nome: "bbb2", uso: "ccc2" },
-];
-
 const listaSkincare: SkinCareProps[] = [
   {
-    pele: listaPeles[0],
-    produto: listaProduto[0],
+    pele: {
+      tipo: "Mista",
+      adversidade:
+        "Oleosidade na zona T (testa, nariz e queixo) e ressecamento nas bochechas; poros dilatados na zona T.",
+      status:
+        "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
+    },
+    produto: { icone: "aaa", nome: "bbb", uso: "ccc" },
   },
-    {
-    pele: listaPeles[1],
-    produto: listaProduto[1],
+  {
+    pele: {
+      tipo: "Oleosa",
+      adversidade:
+        "Excesso de brilho, acne, cravos, poros dilatados, tendência à inflamação.",
+      status:
+        "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
+    },
+    produto: { icone: "aaa1", nome: "bbb1", uso: "ccc1" },
   },
-   {
-    pele: listaPeles[2],
-    produto: listaProduto[2],
+  {
+    pele: {
+      tipo: "Seca",
+      adversidade:
+        "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
+      status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
+    },
+    produto: { icone: "aa2", nome: "bbb2", uso: "ccc2" },
+  },
+  {
+    pele: {
+      tipo: "Normal",
+      adversidade:
+        "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
+      status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
+    },
+    produto: { icone: "avon", nome: "Creme Hidratante", uso: "Uso diário" },
+  },
+  {
+    pele: {
+      tipo: "Sensível",
+      adversidade:
+        "Vermelhidão, ardor, coceira, irritações com produtos ou clima; rosácea em alguns casos.",
+      status:
+        "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
+    },
+    produto: { icone: "nivea", nome: "Gel Calmante", uso: "Após limpeza" },
   },
 ];
-
 // --- Componentes ---
 function SkinCare({ pele, produto }: SkinCareProps) {
   return (
@@ -82,18 +75,6 @@ function App() {
       <h1 className="titulo">Produtos de skin care para cada tipo de pele</h1>
       <h2 className="subtitulo">Tipos de pele:</h2>
 
-      {/* Exemplo de renderização das listas simples */}
-      {/* 
-      {listaPeles.map((pele) => (
-        <Pele key={pele.tipo} {...pele} />
-      ))}
-
-      {listaProduto.map((produto) => (
-        <Produto key={produto.nome} {...produto} />
-      ))} 
-      */}
-
-      {/* Renderização combinada */}
       {listaSkincare.map((item, index) => (
         <SkinCare
           key={index}
