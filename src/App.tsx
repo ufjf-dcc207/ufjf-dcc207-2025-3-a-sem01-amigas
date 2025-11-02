@@ -1,12 +1,8 @@
 import "./App.css";
-import Pele, { type PeleProps } from "./componentes/Pele/Pele";
-import Produto, { type ProdutoProps } from "./componentes/Produto/Produto";
 
-// --- Tipos ---
-export type SkinCareProps = {
-  produto: ProdutoProps;
-  pele: PeleProps;
-};
+import SkinCare, { type SkinCareProps } from "./componentes/SkinCare/SkinCare";
+
+
 
 // --- Dados ---
 const listaSkincare: SkinCareProps[] = [
@@ -59,15 +55,8 @@ const listaSkincare: SkinCareProps[] = [
     produto: { icone: "nivea", nome: "Gel Calmante", uso: "Após limpeza" },
   },
 ];
-// --- Componentes ---
-function SkinCare({ pele, produto }: SkinCareProps) {
-  return (
-    <div>
-      <Pele tipo={pele.tipo} adversidade={pele.adversidade} status={pele.status} />
-      <Produto icone={produto.icone} nome={produto.nome} uso={produto.uso} />
-    </div>
-  );
-}
+
+
 
 function App() {
   return (
