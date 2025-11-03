@@ -11,7 +11,9 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
     },
-    produto: {etapa: "LIMPEZA", produto: "ccc" },
+    produto:[ {etapa: "LIMPEZA", item: "ccc" },
+            {etapa: "HIDRATAÇÃO", item: "ccc" },
+            {etapa: "TRATAMENTO", item: "ccc" }]
   },
   {
     pele: {
@@ -21,7 +23,9 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
     },
-    produto: {  etapa: "LIMPEZA", produto: "ccc1" },
+    produto: [ {etapa: "LIMPEZA", item: "ccc" },
+            {etapa: "HIDRATAÇÃO", item: "ccc" },
+            {etapa: "TRATAMENTO", item: "ccc" }]
   },
   {
     pele: {
@@ -30,7 +34,9 @@ const listaSkincare: SkinCareProps[] = [
         "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
       status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
     },
-    produto: { etapa: "LIMPEZA", produto: "ccc2" },
+    produto:[ {etapa: "LIMPEZA", item: "ccc" },
+            {etapa: "HIDRATAÇÃO", item: "ccc" },
+            {etapa: "TRATAMENTO", item: "ccc" }]
   },
   {
     pele: {
@@ -39,7 +45,9 @@ const listaSkincare: SkinCareProps[] = [
         "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
       status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
     },
-    produto:  {etapa: "LIMPEZA", produto: "Uso diário" },
+    produto:  [ {etapa: "LIMPEZA", item: "ccc" },
+            {etapa: "HIDRATAÇÃO", item: "ccc" },
+            {etapa: "TRATAMENTO", item: "ccc" }]
   },
   {
     pele: {
@@ -49,7 +57,9 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
     },
-    produto: { etapa: "LIMPEZA", produto: "Após limpeza" },
+    produto: [ {etapa: "LIMPEZA", item: "ccc" },
+            {etapa: "HIDRATAÇÃO", item: "ccc" },
+            {etapa: "TRATAMENTO", item: "ccc" }]
   },
 ];
 

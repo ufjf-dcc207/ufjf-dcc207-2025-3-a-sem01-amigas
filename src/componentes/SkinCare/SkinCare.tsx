@@ -4,7 +4,7 @@ import './SkinCare.css'
 import CuidadosImg from "../../assets/cuidados.png"
 
 export type SkinCareProps = {
-  produto: ProdutoProps;
+  produto: ProdutoProps[];
   pele: PeleProps;
 };
 
@@ -13,7 +13,9 @@ export default function SkinCare({ pele, produto }: SkinCareProps) {
     <div className="skinCareCtn">
       <Pele tipo={pele.tipo} adversidade={pele.adversidade} status={pele.status} />
       <img className="imageSC" src={CuidadosImg} />
-      <Produto  etapa={produto.etapa} produto={produto.produto} />
+      {produto.map((produto, index) => (
+        <Produto key={index} etapa={produto.etapa} item={produto.item} />
+      ))}
     </div>
   );
 }
