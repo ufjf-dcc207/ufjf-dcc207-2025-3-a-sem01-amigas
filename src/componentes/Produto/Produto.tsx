@@ -1,15 +1,15 @@
 import "./Produto.css"
 export type ProdutoProps = {
-  nome: string,
-  uso: string;
+  etapa: string,
+  produto: string;
 }
 
 
-export default function Produto({ nome, uso}: ProdutoProps) {
+export default function Produto({ etapa, produto}: ProdutoProps) {
   return (
     <div className="ProdutoCtn">
-      <div> {nome}</div>
-      <div> {uso}</div>
+      <div className="EtapaCtn"> {etapa}</div>
+      <div> {produto}</div>
     </div>
   )
 

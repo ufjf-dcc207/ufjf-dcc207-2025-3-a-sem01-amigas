@@ -11,3 +11,10 @@
   min-height: 230px;
 }
 
+.TipoCtn{
+  font-size: 1.5rem;      
+  font-weight: bold;      
+  color: #6a0dad;         
+  text-transform: capitalize; 
+  margin-bottom: 4px;
+}

@@ -13,7 +13,7 @@ export default function SkinCare({ pele, produto }: SkinCareProps) {
     <div className="skinCareCtn">
       <Pele tipo={pele.tipo} adversidade={pele.adversidade} status={pele.status} />
       <img className="imageSC" src={CuidadosImg} />
-      <Produto  nome={produto.nome} uso={produto.uso} />
+      <Produto  etapa={produto.etapa} produto={produto.produto} />
     </div>
   );
 }

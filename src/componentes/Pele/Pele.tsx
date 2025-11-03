@@ -9,7 +9,7 @@ export type PeleProps = {
 export default function Pele({tipo, adversidade,status}: PeleProps) {
   return (
     <div className="PeleCtn">
-      <div> {tipo}</div>
+      <div className="TipoCtn"> {tipo}</div>
       <div> {adversidade}</div>
 
       

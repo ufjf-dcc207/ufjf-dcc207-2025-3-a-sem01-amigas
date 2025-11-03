@@ -11,7 +11,7 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Equilíbrio entre áreas oleosas e secas; precisa de cuidados específicos para cada região.",
     },
-    produto: {nome: "bbb", uso: "ccc" },
+    produto: {etapa: "LIMPEZA", produto: "ccc" },
   },
   {
     pele: {
@@ -21,7 +21,7 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Produz mais sebo que o necessário; aparência brilhante; textura espessa.",
     },
-    produto: {  nome: "bbb1", uso: "ccc1" },
+    produto: {  etapa: "LIMPEZA", produto: "ccc1" },
   },
   {
     pele: {
@@ -30,7 +30,7 @@ const listaSkincare: SkinCareProps[] = [
         "Ressecamento, descamação, coceira, sensibilidade, sensação de repuxamento.",
       status: "Baixa produção de oleosidade; toque áspero; aparência opaca.",
     },
-    produto: { nome: "bbb2", uso: "ccc2" },
+    produto: { etapa: "LIMPEZA", produto: "ccc2" },
   },
   {
     pele: {
@@ -39,7 +39,7 @@ const listaSkincare: SkinCareProps[] = [
         "Raras imperfeições; leve ressecamento em clima seco; poros pouco visíveis.",
       status: "Equilibrada — nem seca nem oleosa; textura macia e viçosa.",
     },
-    produto:  {nome: "Creme Hidratante", uso: "Uso diário" },
+    produto:  {etapa: "LIMPEZA", produto: "Uso diário" },
   },
   {
     pele: {
@@ -49,7 +49,7 @@ const listaSkincare: SkinCareProps[] = [
       status:
         "Pele reativa; barreira cutânea mais fina; exige produtos suaves e calmantes.",
     },
-    produto: { nome: "Gel Calmante", uso: "Após limpeza" },
+    produto: { etapa: "LIMPEZA", produto: "Após limpeza" },
   },
 ];
 
