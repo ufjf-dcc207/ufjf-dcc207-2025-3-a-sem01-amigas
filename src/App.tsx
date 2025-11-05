@@ -1,7 +1,7 @@
 import "./App.css";
 import SkinCare, { type SkinCareProps } from "./componentes/SkinCare/SkinCare";
 
-// --- Dados ---
+
 const listaSkincare: SkinCareProps[] = [
   {
     pele: {
@@ -63,7 +63,7 @@ const listaSkincare: SkinCareProps[] = [
   },
 ];
 
-// --- Componente principal ---
+
 function App() {
   return (
     <div className="App">

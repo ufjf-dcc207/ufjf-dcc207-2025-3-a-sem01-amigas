@@ -28,7 +28,7 @@
 .SkincaresCtn{
     display: flex;
     width: 90%;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     gap: 30px;
