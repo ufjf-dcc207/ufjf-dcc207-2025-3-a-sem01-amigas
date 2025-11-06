@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+ "homepage": "https://ufjf-dcc207.github.io/ufjf-dcc207-2025-3-a-sem01-amigas/",
   "scripts": {
     "dev": "vite",
     "predeploy": "tsc -b && vite build",
